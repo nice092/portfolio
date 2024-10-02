@@ -5,43 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
-    <title></title>
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <title>Bang & Olufsen - Beosound A9</title>
 </head>
 <body>
 <div id="Wrap">
 
 <header>
-    <div class="innerWrap">
-        <button class="menu">
-            <img src="./images/menu.svg" alt="메뉴" title="메뉴">
-        </button>
-        <div class="logo">
-            <a href="#">
-                <img src="./images/B_O_White_logo.svg" alt="Bang & Olufsen">
-            </a>
+    <div class="mainheader">
+        <div class="innerWrap">
+            <button class="menu">
+                <img src="./images/menu.svg" alt="메뉴" title="메뉴">
+            </button>
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./images/B_O_White_logo.svg" alt="Bang & Olufsen">
+                </a>
+            </h1>
+            <div class="util">
+                <div class="myPage pc">
+                    <button class="btn_myPage">
+                        <img src="./images/myPage.svg" alt="계정" title="계정">
+                    </button>
+                </div>
+                <div class="store pc">
+                    <button class="btn_store">
+                        <img src="./images/place.svg" alt="매장찾기" title="매장찾기">
+                    </button>
+                </div>
+                <div class="cart">
+                    <button class="btn_cart">
+                        <img src="./images/cart.svg" alt="장바구니" title="장바구니">
+                    </button>
+                </div>
+            </div>
+        </div><!--innerWrap-->
+    </div>
+    <div class="subnav">
+        <div class="innerWrap">
+            <h1 class="logo">
+                <a href="#">BEOSOUND A9</a>
+            </h1>
+            <div class="rightbox">
+                <p class="pc">특징</p>
+                <p class="pc">제품사양</p>
+                <p>
+                    <button class="shop">쇼핑하기</button>
+                </p>
+            </div>
         </div>
-        <div class="util">
-            <div class="myPage pc">
-                <button class="btn_myPage">
-                    <img src="./images/myPage.svg" alt="계정" title="계정">
-                </button>
-            </div>
-            <div class="store pc">
-                <button class="btn_store">
-                    <img src="./images/place.svg" alt="매장찾기" title="매장찾기">
-                </button>
-            </div>
-            <div class="cart">
-                <button class="btn_cart">
-                    <img src="./images/cart.svg" alt="장바구니" title="장바구니">
-                </button>
-            </div>
-        </div>
-    </div><!--innerWrap-->
+    </div>
 </header>
 <section class="banner">
     <div class="innerWrap">
@@ -125,11 +142,15 @@
             </video>
             <div class="innerWrap">
                 <div class="txtBox">
-                    <span>100년 역사의 장인 정신으로 구현한 디자인.</span>
+                    <span class="on">100년 역사의 장인 정신으로 구현한 디자인.</span>
                     <span>7개의 드라이버가 선사하는 높은 해상도와 파워풀한 사운드.</span>
                     <span>사운드와 디자인의 완벽한 조화를 선사하는 맞춤형 스피커.</span>
                 </div>
-                <div class="imgbox"></div>
+                <div class="imgbox">
+                    <div class="img1" data-aos="fade-up"></div>
+                    <div class="img2" data-aos="fade-up"></div>
+                    <div class="img3" data-aos="fade-up"></div>
+                </div>
                 <div class="bottomTxt">
                     <p>A9는 모든 것을 갖추고 있습니다</p>
                     <p>아름다운 디자인, 환상적인 장인정신, 놀라운 사운드, 하나의 패키지에!</p>
@@ -355,7 +376,7 @@
     </div><!--con6-->
 </section><!--container-->
 
-<section class="infoWRap">
+<section class="infoWrap">
     <div class="innerWrap">
         <div class="left">
             <p class="tit">제품 세부 정보</p>
@@ -378,14 +399,147 @@
                         <div class="txt">제품 안내서</div>
                     </a>
                 </div>
-            </div>
+            </div><!--downWrap-->
+            <button class="site">제품 지원 사이트</button>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <div class="listCon">
+                <p class="tit">제품구성</p>
+                <ul class="list">
+                    <li>Beosound A9 5th Gen.</li>
+                    <li>전면 커버</li>
+                    <li>원목 다리 3개 </li>
+                    <li>전원 케이블, 2 m</li>
+                    <li>빠른 시작 안내서</li>
+                </ul>
+            </div><!--제품구성-->
+
+            <div class="listCon">
+                <p class="tit">사운드</p>
+                <ul class="list">
+                    <li>권장 실내 크기</li>
+                    <li>15-100 m²</li>
+                    <li>150-1000 ft²</li>
+                    <br>
+                    <li>스피커 구성</li>
+                    <li>¾인치 트위터 2개</li>
+                    <li>3인치 미드레인지 2개</li>
+                    <li>1½인치 전역 2개</li>
+                    <li>8인치 우퍼 1개</li>
+                    <br>
+                    <li>앰프</li>
+                    <li>트위터 드라이버용 150W Class D 2개</li>
+                    <li>중음역용 200W Class D 2개</li>
+                    <li>전역용 200W Class D 2개</li>
+                    <li>우퍼용 400W Class D 1개</li>
+                    <br>
+                    <li>총: 1500W</li>
+                    <br>
+                    <li>주파수 범위</li>
+                    <li>33-23.000 Hz</li>
+                    <br>
+                    <li>최대 음압 레벨 (SPL) @1m</li>
+                    <li>100 dB SPL</li>
+                    <br>
+                    <li>베이스 성능</li>
+                    <li>95 dB SPL</li>
+                    <br>
+                    <li>스테레오 페어링</li>
+                    <li>Beosound A9 5th Gen 두 대를 페어링하여 스테레오 사운드로 감상하세요. </li>
+                    <br>
+                    <li>고급 사운드 특장점</li>
+                    <li>ARC(Active Room Compensation)</li>
+                    <li>과열 방지</li>
+                    <li>ABL(Adaptive Bass Linearization)</li>
+                    <br>
+                    <li>맞춤형 사운드 EQ</li>
+                    <li>5개 프리셋 사용 가능 그리고 Bang & Olufsen 앱에서 완전한 맞춤설정 가능</li>
+                </ul>
+            </div><!--사운드-->
+
+            <div class="listCon">
+                <p class="tit">디자인</p>
+                <ul class="list">
+                    <li>디자이너</li>
+                    <li>Øivind Alexander Slaatto</li>
+                    <br>
+                    <li>소재</li>
+                    <li>알루미늄</li>
+                    <li>패브릭/양모</li>
+                    <li>목재</li>
+                    <li>플라스틱</li>
+                    <br>
+                    <li>규격(너비 x 높이 x 깊이)</li>
+                    <li>70.1 W x 90.8 H x 41.5 D cm</li>
+                    <br>
+                    <li>무게</li>
+                    <li>14.7 kg</li>
+                </ul>
+            </div><!--디자인-->
+
+            <div class="listCon">
+                <p class="tit">전원</p>
+                <ul class="list">
+                    <li>소비 전력</li>
+                    <li>정상 23W</li>
+                    <li>대기 8 와트</li>
+                    <br>
+                    <li>전원 공급 장치</li>
+                    <li>Power supply built-in</li>
+                    <li>Power Cable</li>
+                </ul>
+            </div><!--전원-->
+
+            <div class="listCon">
+                <p class="tit">연결</p>
+                <ul class="list">
+                    <li>블루투스 버전</li>
+                    <li>Bluetooth 5.3</li>
+                    <br>
+                    <li>Bluetooth Codecs</li>
+                    <li>Android: SBC</li>
+                    <li>iOS: SBC, AAC</li>
+                    <br>
+                    <li>Wi-Fi</li>
+                    <li>Dual-Band Wi-Fi (2.4 & 5 GHz)</li>
+                    <li>IEEE 802.11 b/g/a/n/ac/ax </li>
+                    <br>
+                    <li>스트리밍 서비스</li>
+                    <li>Apple AirPlay </li>
+                    <li>Spotify Connect </li>
+                    <li>Google Cast</li>
+                    <li>TIDAL Connect</li>
+                    <li>B&O Radio</li>
+                    <li>Deezer</li>
+                    <li>QPlay 2.0</li>
+                    <br>
+                    <li>Beolink Multiroom</li>
+                    <li>예</li>
+                    <br>
+                    <li>Physical Connections</li>
+                    <li>1 x Ethernet</li>
+                    <li>1 x Line-in via USB-C</li>
+                    <li>1 x Power</li>
+                    <br>
+                    <li>리모컨</li>
+                    <li>Bang & Olufsen 앱 </li>
+                    <li>Beoremote One BT</li>
+                    <li>Beoremote Halo</li>
+                    <br>
+                    <li>온디바이스 컨트롤</li>
+                    <li>예</li>
+                </ul>
+            </div><!--연결-->
+
+        </div>
     </div>
 </section>
 
 
 
 </div><!--Wrap-->
+<script>
+    AOS.init();
+  </script>
 </body>
 </html>
