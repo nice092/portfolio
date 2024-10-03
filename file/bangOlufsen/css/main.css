@@ -427,22 +427,7 @@ header .subnav .innerWrap{}
     cursor: pointer;
     position: relative;
 }
-.infoWrap .listCon .tit::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 12px solid #1a1a1a;
-    transform: scaleY(1);
-}
-.infoWrap .tit.active::after{
-    transform: scaleY(-1);
-}
+
 .infoWrap .listCon .list{
     padding-top: 12px;
     padding-left: 2rem;
