@@ -62,7 +62,7 @@ $(document).ready(function(){
   
 
 
-// con4 특징 슬라이드
+// con4 특징 슬라이드     
 var swiper1 = new Swiper(".sdWrap", {
       slidesPerView: 'auto',
       spaceBetween: 40,
@@ -94,16 +94,20 @@ var swiper2 = new Swiper(".sdCanvas", {
 });
 
 // infoWrap 제품세부정보
-$('.listCon .tit').click(function(){
+$('.infoWrap .listCon .tit').click(function(){
 
-  $(this).toggleClass('active');
-   $(this).parent()
-   .siblings().children('.tit').removeClass('active');
-
+  $(this).toggleClass('rotate');
   $(this).siblings('.list').stop().slideToggle();
   $(this).parent().stop().siblings().children('.list').slideUp();
 
+});
 
+$('.f_info .listCon .tit').click(function(){
+  if (window.innerWidth < 1025) {
+    $(this).toggleClass('rotate');
+    $(this).siblings('.list').stop().slideToggle();
+    $(this).parent().stop().siblings().children('.list').slideUp();
+  }
 });
 
 });//끝
