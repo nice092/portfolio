@@ -41,14 +41,135 @@ button:focus{ outline:0; }
 header{
     position: relative;
     z-index: 999;
-    display: none;
+    /* display: none; */
 }
 header .mainheader{
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+header .mainheader .innerWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .mainheader .menuBtn{
+    width: 30px;
+}
+header .mainheader .menuBtn img{}
+
+header .mainheader .logo{
+    width: 50px;
+}
+header .mainheader .logo img{}
+
+header .mainheader .innerWrap{}
+header .mainheader .util{
+    display: flex;
+    gap: 15px;
+}
+header .mainheader .util>div{}
+header .mainheader .util>div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .mainheader .util>div a span{
+    font-size: 30px;
+    color:#5f6368;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #f5f5f5;
+    width: 20%;
+    height: 100%;
+    transition: all 0.3s;
+}
+nav>div{
+    padding: 0 20px;
+}
+nav .close{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+nav .close .closeBtn{
+    display: flex;
+}
+nav .close .closeBtn span{
+    font-size: 30px;
+}
+nav .menuWrap{
+    height: calc(-150px + 100dvh);
+    overflow: hidden auto;
+    scroll-behavior: smooth;
+    scrollbar-color: #1a1a1a #fff;
+    scrollbar-width: thin;
+    padding-top: 20px;
+}
+nav .menuWrap .menu{
+    margin-bottom: 1rem;
+}
+nav .menuWrap .menu li{
+    margin-bottom: 8px;
+}
+nav .menuWrap .menu li a{
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 4px;
+}
+nav .menuWrap .menu li a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+nav .menuWrap .menu li:hover a::after {
+    transform: scaleX(1);
+}
+nav .menuWrap .menu .headphone span{
+    padding: 3px 6px;
+    background-color: #FFC356;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+nav .nav_util{
+    border-top: 1px solid #e7e7e7;
+    padding: 10px;
+}
+nav .nav_util>div{}
+nav .nav_util>div a{
+    display: flex;
+    align-items: center;
+}
+nav .nav_util .myPage{
+    margin-bottom: 5px;
+}
+nav .nav_util>div a span{}
+nav .nav_util>div a .txt{
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+
+/* 2번째 섹션부터 나오는 header */
 header .subnav{
     position: fixed;
     width: 100%;
@@ -57,32 +178,18 @@ header .subnav{
     transform: translateY(-100%);
     transition: transform 0.3s;
     border-bottom: 1px solid #f5f5f5;
+
+    padding: 20px 0;
+    background-color: #fff;
 }
 header .subnav.view{
     transform: translateY(0);
 }
-header div .innerWrap{
+header .subnav .innerWrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header button{
-    width: 30px;
-}
-header .util{
-    display: flex;
-    height: 30px;
-}
-header .util>div{
-    width: 30px;
-    margin-left: 10px;
-}
-
-header .subnav{
-    padding: 20px 0;
-    background-color: #fff;
-}
-header .subnav .innerWrap{}
 .subnav .logo{
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
@@ -106,6 +213,7 @@ header .subnav .innerWrap{}
     font-size: 12px;
     padding: 8px 0;
 }
+
 
 
 /* banner */
@@ -135,9 +243,11 @@ header .subnav .innerWrap{}
 
 /* container */
 .container{}
-.container .con1{
-    padding-bottom: 150px;
+.container>.con{
+    padding: 150px 0;
+    border-bottom: 1px solid red;
 }
+.container .con1{}
 .container .con1 .item{
     height: 500px;
     display: flex;
@@ -289,6 +399,7 @@ header .subnav .innerWrap{}
 .con2 .imgbox > div:nth-child(2)::after{
     margin-left: auto;
 }
+
 /*  */
 .con2 .bottomTxt{}
 .con2 .bottomTxt p{
@@ -297,7 +408,7 @@ header .subnav .innerWrap{}
     font-size: 1.2rem;
 }
 .con3{
-    padding-top: 150px;
+    padding: 150px 0;
 }
 .symmetry .itemWrap{
     display: flex;
@@ -323,7 +434,8 @@ header .subnav .innerWrap{}
 }
 
 .con4{
-    margin: 140px 0;
+    padding: 140px 0;
+    background-color: #f5f5f7;
 }
 .con4 .innerWrap{
     padding-right: 0;
@@ -375,7 +487,10 @@ header .subnav .innerWrap{}
 }
 
 /* 제품 세부 정보 */
-.infoWrap{}
+.infoWrap{
+    background-color: #FCFAEE;
+    padding-top: 80px;
+}
 .infoWrap .innerWrap{
     display: flex;
 }
@@ -413,6 +528,10 @@ header .subnav .innerWrap{}
     font-weight: 600;
     color: #fff;
     margin-top: 50px;
+    transition: background-color .3s;
+}
+.infoWrap .infoContainer .left .site:hover{
+    background-color: #5f6368;
 }
 
 .infoWrap .right{
@@ -421,26 +540,11 @@ header .subnav .innerWrap{}
 .infoWrap .infoContainer .right .listCon{
     margin-bottom: 8px;
 }
-/* .infoWrap .infoContainer .listCon .tit{
-    font-weight: 600;
-    padding: 10px 0;
-    padding-left: 10px;
-    border-bottom: 1px solid blue;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.infoWrap .infoContainer .listCon .tit span{}
-.infoWrap .infoContainer .listCon .tit span.rotate{
-    transform: rotate(180deg);
-} */
-
 .listCon .tit{
     font-weight: 600;
     padding: 10px 0;
     padding-left: 10px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid #e5e5e5;
     cursor: pointer;
     position: relative;
 }
@@ -472,16 +576,12 @@ header .subnav .innerWrap{}
 .infoWrap .joinWrap{
     padding: 80px 0;
 }
-.joinWrap .left{
-    background-color: skyblue;
-}
+.joinWrap .left{}
 .joinWrap .tit{}
 .joinWrap .tit span{
     display: block;
 }
-.joinWrap .right{
-    background-color: #ccc;
-}
+.joinWrap .right{}
 .joinWrap .right ul{
 }
 .joinWrap .right ul li{
@@ -498,7 +598,6 @@ header .subnav .innerWrap{}
 }
 .joinWrap .right .mailBox{
     padding-top: 20px;
-    background-color: skyblue;
 }
 .joinWrap .right .mailBox form{
     display: flex;
@@ -533,7 +632,7 @@ header .subnav .innerWrap{}
 /* footer */
 footer{
     width: 100%;
-    background-color: #8C8C8C;
+    background-color: #f8f8f8;
     padding: 80px 0;
 }
 footer .f_info{
@@ -593,6 +692,10 @@ footer .copyright .language select option{
 .pc{display: none;}
 *{font-size: 16px;}
 
+/* header */
+nav{
+    width: 100%;
+}
 
 /* container */
 .container{}
@@ -637,6 +740,9 @@ footer .copyright .language select option{
 .con4 .sdWrap .item{
     width: 66%;
 }
+.con5{
+    padding: 0;
+}
 
 /* con6 캔버스*/
 .con6{}
@@ -659,11 +765,16 @@ footer .copyright .language select option{
 }
 .infoWrap .left{
     width: 100%;
+    padding-bottom: 60px;
 }
 .infoWrap .right{
     width: 100%;
 }
 /* footer */
+footer{
+    padding: 0;
+    padding-top: 50px;
+}
 footer .copyright{
     flex-direction: column-reverse;
 }

@@ -20,7 +20,7 @@
 <header>
     <div class="mainheader">
         <div class="innerWrap">
-            <button class="menu">
+            <button class="menuBtn">
                 <img src="./images/menu.svg" alt="메뉴" title="메뉴">
             </button>
             <h1 class="logo">
@@ -30,23 +30,80 @@
             </h1>
             <div class="util">
                 <div class="myPage pc">
-                    <button class="btn_myPage">
-                        <img src="./images/myPage.svg" alt="계정" title="계정">
-                    </button>
+                    <a href="#">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                    </a>
                 </div>
                 <div class="store pc">
-                    <button class="btn_store">
-                        <img src="./images/place.svg" alt="매장찾기" title="매장찾기">
-                    </button>
+                    <a href="#">
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+                    </a>
                 </div>
                 <div class="cart">
-                    <button class="btn_cart">
-                        <img src="./images/cart.svg" alt="장바구니" title="장바구니">
-                    </button>
+                    <a href="#">
+                        <span class="material-symbols-outlined">
+                            local_mall
+                        </span>
+                    </a>
                 </div>
             </div>
         </div><!--innerWrap-->
-    </div>
+    </div><!--mainheader-->
+
+    <nav>
+        <div class="close">
+            <button class="closeBtn">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+        </div>
+
+        <div class="menuWrap">
+            <ul class="menu1 menu">
+                <li><a href="#">스피커</a></li>
+                <li class="headphone">
+                    <a href="#">헤드폰</a>
+                    <span>new</span>
+                </li>
+                <li><a href="#">사운드바</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">액세서리</a></li>
+            </ul>
+            <ul class="menu2 menu">
+                <li><a href="#">B&amp;O의 세계</a></li>
+                <li><a href="#">고객지원</a></li>
+            </ul>
+            <ul class="menu3 menu">
+                <li><a href="#">For professionals</a></li>
+                <li><a href="#">파트너십</a></li>
+            </ul>
+        </div>
+
+        <div class="nav_util">
+            <div class="myPage">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    <span class="txt">매장 찾기</span>
+                </a>
+            </div>
+            <div class="store">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <span class="txt">계정</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div class="subnav">
         <div class="innerWrap">
             <h1 class="logo">
@@ -149,8 +206,12 @@
                     <span>사운드와 디자인의 완벽한 조화를 선사하는 맞춤형 스피커.</span>
                 </div>
                 <div class="imgbox">
-                    <div class="img1" data-aos="fade-up"></div>
-                    <div class="img2" data-aos="fade-up"></div>
+                    <div class="img1" data-aos="fade-up">
+                        <!-- <img src="./images/A9_Gold_5.png" alt="back img"> -->
+                    </div>
+                    <div class="img2" data-aos="fade-up">
+                        <!-- <img src="./images/A9_Natural.png" alt="anjsi"> -->
+                    </div>
                     <div class="img3" data-aos="fade-up"></div>
                 </div>
                 <div class="bottomTxt">
@@ -623,7 +684,7 @@
             <div class="listCon">
                 <p class="tit">Social Links</p>
                 <ul class="list">
-                    <li><a href="#">앱 살펴보기새 탭에서 열림</a></li>
+                    <li><a href="#">앱 살펴보기</a></li>
                     <li><a href="#">The House of Bang &amp; Olufsen</a></li>
                     <li><a href="#">Bang &amp; Olufsen Collective</a></li>
                 </ul>

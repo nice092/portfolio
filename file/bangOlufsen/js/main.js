@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+  //메뉴
+  $('.mainheader .menuBtn').click(function(){
+    $('nav').animate({'left':0});
+  });
+
+  $('nav .closeBtn').click(function(){
+    $('nav').animate({'left':'-100%'});
+  });
+
   $(window).on("scroll", function() {
     var scr = $(this).scrollTop();
 
