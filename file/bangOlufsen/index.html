@@ -31,21 +31,21 @@
             <div class="util">
                 <div class="myPage pc">
                     <a href="#">
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined" title="계정">
                             person
                         </span>
                     </a>
                 </div>
                 <div class="store pc">
                     <a href="#">
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined" title="매장 찾기">
                             location_on
                         </span>
                     </a>
                 </div>
                 <div class="cart">
                     <a href="#">
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined" title="장바구니">
                             local_mall
                         </span>
                     </a>
@@ -90,7 +90,7 @@
                     <span class="material-symbols-outlined">
                         person
                     </span>
-                    <span class="txt">매장 찾기</span>
+                    <span class="txt">계정</span>
                 </a>
             </div>
             <div class="store">
@@ -98,7 +98,7 @@
                     <span class="material-symbols-outlined">
                         location_on
                     </span>
-                    <span class="txt">계정</span>
+                    <span class="txt">매장 찾기</span>
                 </a>
             </div>
         </div>
@@ -108,14 +108,23 @@
         <div class="innerWrap">
             <h1 class="logo">
                 <a href="#">BEOSOUND A9</a>
+                <span class="mb icon">
+                    <span class="material-symbols-outlined">
+                        stat_minus_1
+                    </span>
+                </span>
             </h1>
             <div class="rightbox">
-                <p class="pc">특징</p>
-                <p class="pc">제품사양</p>
+                <p class="pc move1">특징</p>
+                <p class="pc move2">제품사양</p>
                 <p>
                     <button class="shop">쇼핑하기</button>
                 </p>
             </div>
+        </div>
+        <div class="mb mbclick">
+            <span class="move1">특징</span>
+            <span class="move2">제품사양</span>
         </div>
     </div>
 </header>
@@ -207,10 +216,10 @@
                 </div>
                 <div class="imgbox">
                     <div class="img1" data-aos="fade-up">
-                        <!-- <img src="./images/A9_Gold_5.png" alt="back img"> -->
+                        <img src="./images/A9_Gold_5.png" alt="back img">
                     </div>
                     <div class="img2" data-aos="fade-up">
-                        <!-- <img src="./images/A9_Natural.png" alt="anjsi"> -->
+                        <img src="./images/A9_Natural.png" alt="anjsi">
                     </div>
                     <div class="img3" data-aos="fade-up"></div>
                 </div>
@@ -222,6 +231,7 @@
         </div><!--video_bg-->
         
     </div><!--con2-->
+
     <div class="con3 con symmetry">
         <div class="innerWrap">
             <div class="itemWrap">
@@ -276,7 +286,7 @@
                             어느 위치에서든 뛰어난 성능을 선사합니다.
                         </p>
                     </div>
-                  </div>
+                  </div><!--item1-->
                   <div class="swiper-slide item">
                     <div class="imgbox">
                         <img src="./images/con4_2.jpg" alt="공간을 채우는 사운드">
@@ -292,7 +302,7 @@
                             음악이 흐르게 해보세요.
                         </p>
                     </div>
-                  </div>
+                  </div><!--item2-->
                   <div class="swiper-slide item">
                     <div class="imgbox">
                         <video autoplay muted loop id="arc_video">
@@ -311,7 +321,7 @@
                             즐기실 수 있습니다.
                         </p>
                     </div>
-                  </div>
+                  </div><!--item3-->
                   <div class="swiper-slide item">
                     <div class="imgbox">
                         <img src="./images/con4_4.jpg" alt="무단계 제어">
@@ -325,7 +335,7 @@
                             음악을 일시 정지할 수 있습니다.
                         </p>
                     </div>
-                  </div>
+                  </div><!--item4-->
                   <div class="swiper-slide item">
                     <div class="imgbox">
                         <img src="./images/con4_5.jpg" alt="완벽한 연결성">
@@ -342,7 +352,7 @@
                             Bluetooth와 호환됩니다.
                         </p>
                     </div>
-                  </div>
+                  </div><!--item5-->
                   <div class="swiper-slide item">
                     <div class="imgbox">
                         <img src="./images/con4_6.jpg" alt="간편한 구성">
@@ -358,15 +368,18 @@
                             연결을 활성화하라는 메시지가 표시됩니다. 
                             이는 네트워크 설정을 전송하고 BeoSound A9를 
                             홈 네트워크에 통합하는 빠르고 쉬운 방법입니다. 
-                            좋아하는 스트리밍 서비스를 사용하여 집에서 
-                            놀라운 사운드를 경험하세요. 
                             BeoSound A9는 Chromecast™ 내장, 
                             AirPlay 2, Beolink Multiroom 및 Bluetooth를 지원합니다.
                         </p>
                     </div>
-                  </div>
+                  </div><!--item6-->
                 </div>
-              </div>
+                <!-- 백업 여기서부터 -->
+                 <div class="swiperBtn">
+                     <div class="swiper-button-prev"></div>
+                     <div class="swiper-button-next"></div>
+                </div>
+            </div><!--sdWrap-->
         </div>
     </div><!--con4-->
 
@@ -434,7 +447,7 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-              </div>
+              </div><!--sdCanvas-->
         </div>
     </div><!--con6-->
 </section><!--container-->

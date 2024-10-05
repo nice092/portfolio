@@ -9,10 +9,31 @@ $(document).ready(function(){
     $('nav').animate({'left':'-100%'});
   });
 
+  //모바일 특징 제품사양
+  $('.subnav .icon').click(function(){
+    $(this).toggleClass('rotate');
+    $('.subnav .mbclick').slideToggle();
+  });
+
+  // 특징 이동
+$('.move1').click(function() {
+  $('html, body').animate({
+      scrollTop: $('.container').offset().top
+  }, 500); // 0.5초 동안 부드럽게 이동
+});
+
+// 제품사양 이동
+$('.move2').click(function() {
+  $('html, body').animate({
+      scrollTop: $('.infoWrap').offset().top - 50
+  }, 500);
+});
+
+
   $(window).on("scroll", function() {
     var scr = $(this).scrollTop();
 
-    // section1
+    // header 보이게
     var sec2 = $(".con1").offset().top;
     if(scr >= sec2) {
       $(".subnav").addClass("view");
@@ -20,6 +41,12 @@ $(document).ready(function(){
       $(".subnav").removeClass("view");
     }
 
+    //banner
+    const scrPos = $(this).scrollTop();
+    const banner = $('.banner h3');
+    const moveTxt = scrPos * 0.9;
+
+    banner.css('transform', 'translateX(-${moveTxt}px)');
     // section2
     var fixStart = $(".con2").offset().top;
     var fixEnd = $(".con3").offset().top - $(window).height();
@@ -76,6 +103,10 @@ var swiper1 = new Swiper(".sdWrap", {
       slidesPerView: 'auto',
       spaceBetween: 40,
       loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
 
 // con6 캔버스 슬라이드

@@ -50,7 +50,6 @@ header .mainheader{
     left: 0;
 
     padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 header .mainheader .innerWrap{
     display: flex;
@@ -80,7 +79,6 @@ header .mainheader .util>div a{
 }
 header .mainheader .util>div a span{
     font-size: 30px;
-    color:#5f6368;
 }
 
 nav{
@@ -98,7 +96,7 @@ nav>div{
 nav .close{
     display: flex;
     justify-content: end;
-    padding: 10px;
+    padding: 20px;
 }
 nav .close .closeBtn{
     display: flex;
@@ -107,7 +105,7 @@ nav .close .closeBtn span{
     font-size: 30px;
 }
 nav .menuWrap{
-    height: calc(-150px + 100dvh);
+    height: calc(-155px + 100dvh);
     overflow: hidden auto;
     scroll-behavior: smooth;
     scrollbar-color: #1a1a1a #fff;
@@ -152,7 +150,7 @@ nav .menuWrap .menu .headphone span{
 }
 nav .nav_util{
     border-top: 1px solid #e7e7e7;
-    padding: 10px;
+    padding: 10px 20px;
 }
 nav .nav_util>div{}
 nav .nav_util>div a{
@@ -168,7 +166,6 @@ nav .nav_util>div a .txt{
     padding-left: 10px;
 }
 
-
 /* 2번째 섹션부터 나오는 header */
 header .subnav{
     position: fixed;
@@ -179,7 +176,6 @@ header .subnav{
     transition: transform 0.3s;
     border-bottom: 1px solid #f5f5f5;
 
-    padding: 20px 0;
     background-color: #fff;
 }
 header .subnav.view{
@@ -189,12 +185,26 @@ header .subnav .innerWrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 .subnav .logo{
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.subnav .logo .icon{
+    display: inline-flex;
+    transition: transform .3s;
+}
+.subnav .logo .icon span{
+    font-size: 26px;
+}
+.subnav .logo .icon.rotate{
+    transform: rotate(180deg);
 }
 .subnav .rightbox{
     display: flex;
@@ -213,13 +223,22 @@ header .subnav .innerWrap{
     font-size: 12px;
     padding: 8px 0;
 }
-
-
+.subnav .mbclick{
+    padding: 16px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #f5f5f5;
+    display: none;
+}
+.subnav .mbclick span{
+    margin-right: 1rem;
+    cursor: pointer;
+}
 
 /* banner */
 .banner{
     padding: 320px 0;
     background-color: #f8f8f8;
+    overflow: hidden;
 }
 .banner .innerWrap{
     position: relative;
@@ -230,6 +249,9 @@ header .subnav .innerWrap{
     white-space: nowrap;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 700;
+
+    position: relative;
+    transition: transform 0.3s ease-out;
 }
 .banner .imgbox{
     position: absolute;
@@ -237,6 +259,8 @@ header .subnav .innerWrap{
     left: 50%;
     width: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
 }
 .banner .imgbox img{}
 
@@ -245,7 +269,6 @@ header .subnav .innerWrap{
 .container{}
 .container>.con{
     padding: 150px 0;
-    border-bottom: 1px solid red;
 }
 .container .con1{}
 .container .con1 .item{
@@ -253,6 +276,7 @@ header .subnav .innerWrap{
     display: flex;
     align-items: center;
 }
+/* .con1  특징1*/
 .con1 .item .imgbox{
     width: 50%;
     height: 100%;
@@ -345,7 +369,7 @@ header .subnav .innerWrap{
     opacity: 1;
 }
 
-/* con2  */
+/* con2 특징2 scroll 효과*/
 .con2{
     width: 100%;
     overflow: hidden;
@@ -399,17 +423,14 @@ header .subnav .innerWrap{
 .con2 .imgbox > div:nth-child(2)::after{
     margin-left: auto;
 }
-
-/*  */
 .con2 .bottomTxt{}
 .con2 .bottomTxt p{
     text-align: center;
     color: #fff;
     font-size: 1.2rem;
 }
-.con3{
-    padding: 150px 0;
-}
+
+/* .con3 특징3 (.con6 대칭)*/
 .symmetry .itemWrap{
     display: flex;
     gap: 40px;
@@ -433,14 +454,19 @@ header .subnav .innerWrap{
     aspect-ratio: 1 / 1;
 }
 
+/* .con4 특징4 슬라이드 */
 .con4{
-    padding: 140px 0;
+    padding: 140px 0 50px;
     background-color: #f5f5f7;
 }
 .con4 .innerWrap{
     padding-right: 0;
 }
-.con4 .sdWrap{}
+.con4 .sdWrap{
+    /* 스와이퍼수정 */
+    position: relative;
+    padding-bottom: 80px;
+}
 .con4 .sdWrap .item{
     width: 33%;
 }
@@ -458,8 +484,41 @@ header .subnav .innerWrap{
 .con4 .sdWrap .item #arc_video{
     object-fit: cover;
     max-height: 100%;
+    transform: translateX(-20%);
+}
+.con4 .sdWrap .item .txtBox .txt{
+    font-size: 16px;
+}
+.con4 .sdWrap .swiperBtn{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.con4 .sdWrap .swiperBtn .swiper-button-next,
+.con4 .sdWrap .swiperBtn .swiper-button-prev{
+    top: unset !important;
+    left: unset !important;
+    bottom: unset !important;
+    right: auto !important;
+    position: unset !important;
+    width: 40px;
+    height: 40px;
+    background-color: #E2E2E5;
+    color: #767677;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.con4 .sdWrap .swiper-button-next::after,
+.con4 .sdWrap .swiper-button-prev::after{
+    font-size: 20px;
+    font-weight: 900;
 }
 
+/* .con5 특징5 .con3대칭 */
 .con5 .itemWrap{
     flex-direction: row-reverse;
 }
@@ -467,19 +526,20 @@ header .subnav .innerWrap{
 
 /* con6 캔버스*/
 .con6{
-    margin: 120px 0;
+    padding: 120px 0;
 }
 .con6 .tit{
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
     word-break: keep-all;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 .con6 .tit span{
     display: block;
     /* font-size: ; */
 }
+.con6 .sdCanvas{}
 .con6 .item{
     /* width: 65%; */
     width: calc(65% - 40px);
@@ -544,7 +604,7 @@ header .subnav .innerWrap{
     font-weight: 600;
     padding: 10px 0;
     padding-left: 10px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #CECECF;
     cursor: pointer;
     position: relative;
 }
@@ -639,6 +699,8 @@ footer .f_info{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #CECECF;
 }
 footer .f_info .listCon{
     width: 100%;
@@ -777,13 +839,11 @@ footer{
 }
 footer .copyright{
     flex-direction: column-reverse;
+    padding-bottom: 60px;
 }
 footer .copyright .copyinfo{
     padding-top: 20px;
 }
-
-
-
 }/* 모바일 화면 끝 */
 
 /* 태블릿 화면 스타일 */
@@ -799,8 +859,18 @@ footer .copyright .copyinfo{
 *{
     font-size: 18px;
 }
+/* header */
+.subnav .logo .icon{
+    display: none;
+}
+.subnav .mbclick{
+    display: none;
+}
 
 /* footer */
+footer{
+    padding-bottom: 20px;
+}
 footer .f_info{
     flex-direction: row;
 }
