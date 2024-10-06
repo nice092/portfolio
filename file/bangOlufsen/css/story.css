@@ -1,17 +1,8 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-@font-face {
-    font-family: 'SCDream'; 
-    src: url(../fonts/SCDream8.otf) format('opentype');
-    font-weight: 800;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SCDream'; 
-    src: url(../fonts/SCDream6.otf) format('opentype');
-    font-weight: 600;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
@@ -133,7 +124,7 @@ section{
     content: '';
     width: 4px;
     height: 1em;
-    background-color: #039669;
+    background-color: #FFC356;
     margin-right: 10px;
 }
 .content .con .txt,
@@ -152,27 +143,22 @@ section{
     width: 100px;
     height: 100px;
     text-indent: -9999px;
+    border: 1px solid #3e3e3e;
 }
 .content .con4 ul li{
     font-family: 'Noto Sans KR', sans-serif;
 }
 .content .con4 ul li:first-child{
-    font-family: "SCDream", sans-serif;
-    font-weight: 600;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
 }
 .content .con4 ul li:nth-child(2){
-    font-family: "SCDream", sans-serif;
-    font-weight: 800;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-}
-.content .con4 ul li:nth-child(3){
     font-weight: normal;
 }
-.content .con4 ul li:nth-child(4){
+.content .con4 ul li:nth-child(3){
     font-weight: 600;
 }
-.content .con4 ul li:nth-child(5){
+.content .con4 ul li:nth-child(4){
     font-weight: bold;
 }
 /* container */
@@ -194,7 +180,7 @@ section{
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    border-bottom: 1px solid #039669;
+    border-bottom: 1px solid #FFC356;
     padding-left: 20px;
     padding-bottom: 5px;
 }

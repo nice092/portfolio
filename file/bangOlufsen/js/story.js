@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    alert("이 화면은 1920px 해상도에 최적화 되어 있습니다. 이상으로 보는 것을 권장 드립니다.");
-
+    alert("이 화면은 1920px 해상도에 최적화되어 있으며, 해당 해상도에서의 이용을 권장합니다.");
+    
     $imgBoxes = document.querySelectorAll(".imgbox");
     
     let txtBoxOffset = () => {
