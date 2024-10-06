@@ -553,6 +553,36 @@ header .subnav .innerWrap{
     width: calc(65% - 40px);
     max-height: 600px;
 }
+.con6 .sdCanvas .swiper-button-next,
+.con6 .sdCanvas .swiper-button-prev{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--mainbg-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.con6 .sdCanvas .swiper-button-next::after,
+.con6 .sdCanvas .swiper-button-prev::after{
+    font-size: 24px;
+    color: var(--font-color);
+    transition: color 0.3s ease;
+}
+/* hover시 버튼이 보이게 */
+.con6 .sdCanvas:hover .swiper-button-next,
+.con6 .sdCanvas:hover .swiper-button-prev{
+    opacity: 1;
+}
+
+/* hover시 색 변경 */
+.con6 .sdCanvas .swiper-button-next:hover,
+.con6 .sdCanvas .swiper-button-prev:hover{
+    background-color: rgba(0,0,0,.3);
+}
+.con6 .sdCanvas .swiper-button-next:hover:after,
+.con6 .sdCanvas .swiper-button-prev:hover:after{
+    color: var(--mainbg-color);
+}
 
 /* 제품 세부 정보 */
 .infoWrap{
