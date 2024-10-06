@@ -85,7 +85,8 @@ header .mainheader .util>div a span{
 }
 
 nav{
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     top: 0;
     left: -100%;
     background-color: #f5f5f7;
