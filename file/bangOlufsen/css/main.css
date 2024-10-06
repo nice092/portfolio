@@ -85,7 +85,6 @@ header .mainheader .util>div a span{
 }
 
 nav{
-    /* position: fixed; */
     position: absolute;
     top: 0;
     left: -100%;
@@ -335,14 +334,16 @@ header .subnav .innerWrap{
     right: 0;
 }
 .con1 .item3{}
-/* con1, con5 */
+
+/* con1, con5 자세히보기 링크*/
 .con .link{
     position: fixed;
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     transform: translateX(-50%);
 }
-.con1 .link{display: none;}
+.con1 .item3
+.con1 .link{}
 .con .link .linkbtn{
     display: flex;
     justify-content: space-between;
