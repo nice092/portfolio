@@ -46,8 +46,9 @@ $('.move2').click(function() {
     const banner = $('.banner h3');
     const moveTxt = scrPos * 0.9;
 
-    banner.css('transform', 'translateX(-${moveTxt}px)');
-    // section2
+    banner.css('transform', `translateX(-${moveTxt}px)`);
+
+    // .con2
     var fixStart = $(".con2").offset().top;
     var fixEnd = $(".con3").offset().top - $(window).height();
 

@@ -341,8 +341,9 @@ header .subnav .innerWrap{
     left: 50%;
     bottom: 10px;
     transform: translateX(-50%);
+    opacity: 0;
 }
-.con1 .item3
+.con1 .item3{}
 .con1 .link{}
 .con .link .linkbtn{
     display: flex;
@@ -356,6 +357,7 @@ header .subnav .innerWrap{
 }
 .con .linkbtn .btntxt{
     font-weight: 600;
+    font-size: 14px;
 }
 .con .linkbtn .plus{
     display: inline-block;
@@ -386,6 +388,7 @@ header .subnav .innerWrap{
     position: relative;
     padding-top: 70px;
     background-color: #000;
+    padding-bottom: 200px;
 }
 .con2 #bg_video{
     position: absolute;
@@ -417,23 +420,32 @@ header .subnav .innerWrap{
     opacity: 1;
 }
 .con2 .imgbox{}
+
 /*  */
+/* 백업 */
 .con2 .imgbox > div{
     height: 100vh;
     display: flex;
     align-items: center;
 }
-.con2 .imgbox > div::after{
+/* .con2 .imgbox > div::after{
     content: '';
     display: block;
     width: 500px;
     height: 500px;
     background-color: #ccc;
-}
-.con2 .imgbox > div:nth-child(2)::after{
+} */
+/* .con2 .imgbox > div:nth-child(2)::after{
     margin-left: auto;
+} */
+ .con2 .imgbox >div:nth-child(2){
+    justify-content: flex-end;
+ }
+.con2 .bottomTxt{
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
 }
-.con2 .bottomTxt{}
 .con2 .bottomTxt p{
     text-align: center;
     color: #fff;
