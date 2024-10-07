@@ -19,10 +19,10 @@ $(document).ready(function(){
 $('.move1').click(function() {
   $('html, body').animate({
       scrollTop: $('.container').offset().top
-  }, 500); // 0.5초 동안 부드럽게 이동
+  }, 500); 
 });
 
-// 제품사양 이동
+// subnav 이동
 $('.move2').click(function() {
   $('html, body').animate({
       scrollTop: $('.infoWrap').offset().top - 50
@@ -42,9 +42,8 @@ $('.move2').click(function() {
     }
 
     //banner
-    const scrPos = $(this).scrollTop();
     const banner = $('.banner h3');
-    const moveTxt = scrPos * 0.9;
+    const moveTxt = scr * 0.9;
 
     banner.css('transform', `translateX(-${moveTxt}px)`);
 

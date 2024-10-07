@@ -421,8 +421,7 @@ header .subnav .innerWrap{
 }
 .con2 .imgbox{}
 
-/*  */
-/* 백업 */
+/* 수정할 부분 */
 .con2 .imgbox > div{
     height: 100vh;
     display: flex;
