@@ -43,7 +43,7 @@ $('.move2').click(function() {
 
     //banner
     const banner = $('.banner h3');
-    const moveTxt = scr * 0.9;
+    const moveTxt = scr * 1.2;
 
     banner.css('transform', `translateX(-${moveTxt}px)`);
 
@@ -64,8 +64,8 @@ $('.move2').click(function() {
     } else if(scr >= fixStart && scr < fixEnd) {
       $(".con2 .txtBox").css({
         position: "fixed",
-        top : 0,
-        left: 0
+        top : 70,
+        left: "50%"
       });
       $("#bg_video").css({
         position: "fixed",
@@ -111,7 +111,7 @@ var swiper1 = new Swiper(".sdWrap", {
 
 // con6 캔버스 슬라이드
 var swiper2 = new Swiper(".sdCanvas", {
-  slidesPerView: 'auto',
+  slidesPerView: 1.5,
   centeredSlides: true,
   loop: true,
   breakpoints: {
@@ -149,5 +149,27 @@ $('.f_info .listCon .tit').click(function(){
     $(this).parent().stop().siblings().children('.list').slideUp();
   }
 });
+
+
+// $(window).on("scroll", function() {
+//   let scr = $(this).scrollTop();
+//   if(scr >= $(".con1 .item3").offset().top - $(window).height() && scr < $(".con2").offset().top) {
+    
+//   }
+// });
+
+const thumbsSlider = new Swiper(".thumb", {
+
+});
+
+$(".colorBox li").on("click", function() {
+  const idx = $(this).index();
+  $(".thumbs .thumb").eq(idx).show().siblings().hide();
+});
+
+$(".thumb .swiper-slide").on("click", function() {
+  const viewImage = $(this).children().attr("src");
+  $(".priceWrap .view").html(`<img src="${viewImage}">`)
+})
 
 });//끝

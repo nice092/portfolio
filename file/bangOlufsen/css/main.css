@@ -259,7 +259,7 @@ header .subnav .innerWrap{
     font-weight: 700;
 
     position: relative;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease-out;
 }
 .banner .imgbox{
     position: absolute;
@@ -271,6 +271,75 @@ header .subnav .innerWrap{
     text-align: center;
 }
 .banner .imgbox img{}
+
+/* priceWrap */
+.priceWrap{
+    width: 100%;
+    background-color: var(--mainbg-color);
+}
+.priceWrap .innerWrap{
+    display: flex;
+    flex-direction: column;
+}
+.priceWrap .leftBox{
+    width: 100%;
+}
+.priceWrap .rightBox{
+    width: 100%;
+}
+.priceWrap .rightBox .txtBox{}
+.priceWrap .rightBox .txtBox .logo{
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.priceWrap .rightBox .txtBox .tit{
+    font-size: 2rem;
+    padding: 8px 0;
+}
+.priceWrap .rightBox .txtBox .txt{
+    font-size: 16px;
+}
+.priceWrap .rightBox .txtBox .accessory{
+    color: #8C8C8C;
+}
+.priceWrap .rightBox .txtBox .accessory a{
+    text-decoration: underline;
+}
+
+.priceWrap .rightBox .colorWrap{}
+.priceWrap .rightBox .colorWrap .colorBox{
+    display: flex;
+}
+.priceWrap .colorWrap .colorBox li{
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid var(--font-color);
+    margin-right: 5px;
+}
+.priceWrap .colorWrap .colorBox li:nth-child(1){
+    background-color: #DFCAA7;
+}
+.priceWrap .colorWrap .colorBox li:nth-child(2){
+    background-color: #DADADA;
+}
+.priceWrap .colorWrap .colorBox li:nth-child(3){
+    background-color: #242528;
+}
+.priceWrap .rightBox .buyWrap{}
+.priceWrap .rightBox .buyWrap li{
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--main-color);
+    font-weight: 500;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+.priceWrap .rightBox .buyWrap{}
 
 
 /* container */
@@ -341,11 +410,32 @@ header .subnav .innerWrap{
     left: 50%;
     bottom: 10px;
     transform: translateX(-50%);
-    opacity: 0;
+    opacity: 1;
 }
-.con1 .item3{}
-.con1 .link{}
+.con1{
+    position: relative;
+}
+.con1 .item3,
+.con5 .item2{
+    position: relative;
+}
+/* ddd */
+.con .link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 .con .link .linkbtn{
+    position: sticky;
+    bottom: 30px;
+    margin-bottom: 30px;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -354,6 +444,7 @@ header .subnav .innerWrap{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
     padding: 10px 20px;
+    /* background-color: red; */
 }
 .con .linkbtn .btntxt{
     font-weight: 600;
@@ -408,7 +499,12 @@ header .subnav .innerWrap{
     padding-top: 70px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    max-width: 1280px;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 9;
+    mix-blend-mode: overlay;
 }
 .con2 .txtBox span{
     color: #fff;
@@ -543,7 +639,7 @@ header .subnav .innerWrap{
 .con5 .itemWrap{
     flex-direction: row-reverse;
 }
-.con5 .link{display: none;}
+.con5 .link{}
 
 /* con6 캔버스*/
 .con6{
@@ -931,6 +1027,17 @@ footer .copyright{
 }
 .subnav .mbclick{
     display: none;
+}
+
+/* priceWrap */
+.priceWrap .innerWrap{
+    flex-direction: row;
+}
+.priceWrap .leftBox{
+    width: 50%;
+}
+.priceWrap .rightBox{
+    width: 50%;
 }
 
 /* footer */
