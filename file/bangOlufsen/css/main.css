@@ -276,14 +276,16 @@ header .subnav .innerWrap{
 .priceWrap{
     width: 100%;
     background-color: var(--mainbg-color);
+    padding: 50px 0;
 }
 .priceWrap .innerWrap{
     display: flex;
     flex-direction: column;
+    gap: 40px;
 }
 .priceWrap .leftBox{
     width: 100%;
-    height: 400px;
+    max-height: 650px;
     background-color: pink;
 }
 .priceWrap .leftBox .viewCon{
@@ -292,40 +294,44 @@ header .subnav .innerWrap{
 .priceWrap .leftBox .viewCon:first-child{
     display: block;
 }
+.priceWrap .swiper-pagination-bullet-active{
+    background-color: var(--main-color);
+}
 .priceWrap .rightBox{
     width: 100%;
 }
 .priceWrap .rightBox .txtBox{}
-.priceWrap .rightBox .txtBox .logo{
+.priceWrap .txtBox .logo{
     font-family: "Lexend Deca", sans-serif;
     text-transform: uppercase;
     font-weight: 300;
 }
-.priceWrap .rightBox .txtBox .tit{
+.priceWrap .txtBox .tit{
     font-size: 2rem;
     padding: 8px 0;
 }
-.priceWrap .rightBox .txtBox .txt{
+.priceWrap .txtBox .txt{
     font-size: 16px;
+    padding: 10px 0 20px;
 }
 .priceWrap .rightBox .txtBox .accessory{
     color: #8C8C8C;
 }
 .priceWrap .rightBox .txtBox .accessory a{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .priceWrap .rightBox .colorWrap{}
 .priceWrap .rightBox .colorWrap .colorBox{
     display: flex;
-    padding: 20px 0 10px;
+    padding: 30px 0 8px;
 }
 .priceWrap .colorWrap .colorBox li{
     text-indent: -9999px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    padding: 3px;
     border: 1px solid var(--font-color);
     margin-right: 5px;
 }
@@ -343,29 +349,60 @@ header .subnav .innerWrap{
 }
 .priceWrap .colorWrap .colorTxt{
     width: 100%;
-    height: 30px;
-    line-height: 30px;
-    border: 1px solid;
+    font-size: 12px;
+    color: #767677;
+}
+.priceWrap .colorWrap .price{
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 30px 0;
 }
 .priceWrap .rightBox .buyWrap{
     padding: 20px 0;
 }
 .priceWrap .rightBox .buyWrap li{
     width: 100%;
-    padding: 10px 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /* padding: 10px 0; */
     background-color: var(--main-color);
     font-weight: 500;
     border-radius: 25px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
-}
-.priceWrap .rightBox .buyWrap{}
-.priceWrap .rightBox .service{
-    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid var(--font-color);
     
 }
-.priceWrap .rightBox .service{}
+.priceWrap .rightBox .buyWrap li:first-child{
+    border: 0;
+}
+.priceWrap .rightBox .buyWrap li a{
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: background-color .3s;
+}
+.priceWrap .rightBox .buyWrap li:hover a{
+    background-color: var(--font-color);
+    color: #fff;
+}
+.priceWrap .rightBox .service{
+    display: flex;
+}
+.priceWrap .rightBox .service li{
+    position: relative;
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+.priceWrap .rightBox .service li a{
+    font-size: 14px;
+}
 
 
 /* container */
@@ -688,8 +725,9 @@ header .subnav .innerWrap{
     width: calc(65% - 40px);
     max-height: 600px;
 }
-.con6 .sdCanvas .swiper-button-next,
-.con6 .sdCanvas .swiper-button-prev{
+/*↓ .prieceWrap-viewBox, .con6-sdCanvas 공통버튼 ↓*/
+.viewBox .sdBtn,
+.sdCanvas .sdBtn{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -697,27 +735,28 @@ header .subnav .innerWrap{
     opacity: 0;
     transition: all 0.3s ease;
 }
-.con6 .sdCanvas .swiper-button-next::after,
-.con6 .sdCanvas .swiper-button-prev::after{
+.viewBox .sdBtn::after,
+.sdCanvas .sdBtn::after{
     font-size: 24px;
     color: var(--font-color);
     transition: color 0.3s ease;
 }
 /* hover시 버튼이 보이게 */
-.con6 .sdCanvas:hover .swiper-button-next,
-.con6 .sdCanvas:hover .swiper-button-prev{
+.viewBox:hover .sdBtn,
+.sdCanvas:hover .sdBtn{
     opacity: 1;
 }
 
 /* hover시 색 변경 */
-.con6 .sdCanvas .swiper-button-next:hover,
-.con6 .sdCanvas .swiper-button-prev:hover{
+.viewBox .sdBtn:hover,
+.sdCanvas .sdBtn:hover{
     background-color: rgba(0,0,0,.3);
 }
-.con6 .sdCanvas .swiper-button-next:hover:after,
-.con6 .sdCanvas .swiper-button-prev:hover:after{
+.viewBox .sdBtn:hover:after,
+.sdCanvas .sdBtn:hover:after{
     color: var(--mainbg-color);
 }
+/*↑ .prieceWrap-viewBox, .con6-sdCanvas 공통버튼 ↑*/
 
 /* 제품 세부 정보 */
 .infoWrap{
@@ -825,6 +864,7 @@ header .subnav .innerWrap{
     position: relative;
     padding: 5px 0 5px 30px;
 }
+.priceWrap .rightBox .service li::before,
 .joinWrap .right ul li::before{
     content: 'check';
     font-family: 'Material Icons';
@@ -1064,6 +1104,13 @@ footer .copyright{
 }
 .priceWrap .rightBox{
     width: 50%;
+}
+.priceWrap .rightBox .buyWrap li{
+    width: 50%;
+}
+.priceWrap .rightBox .service{
+    width: 50%;
+    justify-content: space-between;
 }
 
 /* footer */

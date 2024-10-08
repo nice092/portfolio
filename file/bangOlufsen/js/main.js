@@ -41,15 +41,34 @@ $('.colorBox li').click(function(){
   $('.view .viewCon').eq(i).css({'display' : 'block'})
   .siblings().css({'display':'none'});
 
+  if (i === 2) {  // 인덱스 2는 마지막 li 요소
+    $('.price').text('₩4,999,000'); // 가격 변경
+} else {
+    $('.price').text('₩5,299,000'); // 기본 가격
+}
+
 });
 
+//.priceWrap 미리보기
+var swiper1 = new Swiper(".viewBox", {
+  slidesPerView: 1,
+  // spaceBetween: 40,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
 
 
   $(window).on("scroll", function() {
     var scr = $(this).scrollTop();
 
     // header 보이게
-    var sec2 = $(".con1").offset().top;
+    var sec2 = $(".priceWrap").offset().top;
     if(scr >= sec2) {
       $(".subnav").addClass("view");
     } else {
@@ -114,7 +133,7 @@ $('.colorBox li').click(function(){
 
 
 // con4 특징 슬라이드     
-var swiper1 = new Swiper(".sdWrap", {
+var swiper2 = new Swiper(".sdWrap", {
       slidesPerView: 'auto',
       spaceBetween: 40,
       loop: true,
@@ -125,7 +144,7 @@ var swiper1 = new Swiper(".sdWrap", {
 });
 
 // con6 캔버스 슬라이드
-var swiper2 = new Swiper(".sdCanvas", {
+var swiper3 = new Swiper(".sdCanvas", {
   slidesPerView: 1.5,
   centeredSlides: true,
   loop: true,
