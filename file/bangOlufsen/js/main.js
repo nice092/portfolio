@@ -29,6 +29,21 @@ $('.move2').click(function() {
   }, 500);
 });
 
+//
+$('.colorBox li').click(function(){
+  $(this).addClass('active').siblings()
+  .removeClass('active');
+
+  let txt = $(this).text();
+  $('.colorTxt').text(txt);
+
+  let i = $(this).index();
+  $('.view .viewCon').eq(i).css({'display' : 'block'})
+  .siblings().css({'display':'none'});
+
+});
+
+
 
   $(window).on("scroll", function() {
     var scr = $(this).scrollTop();
