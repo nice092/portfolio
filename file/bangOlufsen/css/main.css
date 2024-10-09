@@ -546,11 +546,6 @@ header .subnav .innerWrap{
     height: 30px;
     background-color: var(--main-color);
     border-radius: 50%;
-    /* text-align: center; */
-    /* font-size: 1.5rem; */
-    /* line-height: 30px; */
-    /* color: #fff; */
-    /* font-weight: 600; */
     margin-left: 1rem;
     transition: opacity .5s;
     padding: 7px;
