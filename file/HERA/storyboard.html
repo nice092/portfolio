@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/story.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <!-- <script src="js/story.js"></script> -->
+    <script src="js/story.js"></script>
     <title>HERA Storyboard</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
                 </h1>
             </div>
             <ul class="txt">
-                <li><span>작업기간</span> 2024.</li>
+                <li><span>작업기간</span> 2024.05</li>
                 <li><span>기여도</span>100%</li>
                 <li class="tool"><span>사용툴</span>
                     <div class="icon">
@@ -160,39 +160,6 @@
     </section>
     <section class="end"></section>
 </div><!--wrap-->
-<script>
 
-$imgBoxes = document.querySelectorAll(".imgbox");
-
-let txtBoxOffset = () => {
-    const os = new Array;
-    
-    document.querySelectorAll(".txtbox").forEach((e, i) => {
-        os.push(e.offsetTop);
-    });
-
-    return os;
-}
-
-txtBoxOffset();
-
-window.addEventListener("scroll", () => {
-    const scr = this.scrollY;
-    $imgBoxes.forEach(element => {
-        element.classList.remove("on");
-    });
-    if(scr >= txtBoxOffset()[0] && scr < txtBoxOffset()[1]) {
-        $imgBoxes[0].classList.add("on");
-    } else if(scr >= txtBoxOffset()[1] && scr < txtBoxOffset()[2]) {
-        $imgBoxes[1].classList.add("on");
-    } else if(scr >= txtBoxOffset()[2] && scr < txtBoxOffset()[3]) {
-        $imgBoxes[2].classList.add("on");
-    } else if(scr >= txtBoxOffset()[0]) {
-        $imgBoxes[3].classList.add("on");
-    } else {
-        $imgBoxes[0].classList.add("on");
-    }
-});
-</script>
 </body>
 </html>

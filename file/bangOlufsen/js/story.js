@@ -19,22 +19,6 @@ $(document).ready(function(){
         $imgBoxes.forEach(element => {
             element.classList.remove("on");
         });
-        // if(scr >= txtBoxOffset()[0] && scr < txtBoxOffset()[1]) {
-        //     $imgBoxes[0].classList.add("on");
-
-        // } else if(scr >= txtBoxOffset()[1] && scr < txtBoxOffset()[2]) {
-        //     $imgBoxes[1].classList.add("on");
-
-        // } else if(scr >= txtBoxOffset()[2] && scr < txtBoxOffset()[3]) {
-        //     $imgBoxes[2].classList.add("on");
-
-        // } else if(scr >= txtBoxOffset()[0]) {
-        //     $imgBoxes[3].classList.add("on");
-
-        // } else {
-        //     $imgBoxes[0].classList.add("on");
-        // }
-
         if(scr >= txtBoxOffset()[0] && scr < txtBoxOffset()[1]) {
             $imgBoxes[0].classList.add("on");
 
@@ -44,17 +28,12 @@ $(document).ready(function(){
         } else if(scr >= txtBoxOffset()[2] && scr < txtBoxOffset()[3]) {
             $imgBoxes[2].classList.add("on");
 
-        } else if(scr >= txtBoxOffset()[3] && scr < txtBoxOffset()[4]) {
-            $imgBoxes[3].classList.add("on");
-
-        } else if(scr >= txtBoxOffset()[4] && scr < txtBoxOffset()[5]) {
-            $imgBoxes[4].classList.add("on");
-
         } else if(scr >= txtBoxOffset()[0]) {
-            $imgBoxes[5].classList.add("on");
+            $imgBoxes[3].classList.add("on");
 
         } else {
             $imgBoxes[0].classList.add("on");
         }
+
     });
 });//끝

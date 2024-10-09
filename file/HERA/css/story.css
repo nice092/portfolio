@@ -208,9 +208,7 @@ section{
 
 .right .imgwrap .imgbox.on{
     z-index: 9999;
-    /* animation: fadeIn 0.3s forwards linear; */
     opacity: 1;
-    /* transition: opacity 0.3s; */
 }
 
 .right .imgwrap .imgbox img{}
