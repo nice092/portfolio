@@ -90,7 +90,6 @@ nav{
     left: -100%;
     background-color: #f5f5f7;
     width: 20%;
-    height: 100%;
     transition: all 0.3s;
 }
 nav>div{
@@ -316,10 +315,12 @@ header .subnav .innerWrap{
 }
 .priceWrap .rightBox .txtBox .accessory{
     color: #8C8C8C;
+    font-size:16px;
 }
 .priceWrap .rightBox .txtBox .accessory a{
     text-decoration: underline;
     cursor: pointer;
+    font-size:16px;
 }
 
 .priceWrap .rightBox .colorWrap{}
