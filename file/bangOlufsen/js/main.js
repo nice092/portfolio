@@ -77,7 +77,7 @@ var swiper1 = new Swiper(".viewBox", {
 
     //banner
     const banner = $('.banner h3');
-    const moveTxt = scr * 1.2;
+    const moveTxt = scr * 1.8;
 
     banner.css('transform', `translateX(-${moveTxt}px)`);
 
@@ -185,13 +185,7 @@ $('.f_info .listCon .tit').click(function(){
 });
 
 
-// $(window).on("scroll", function() {
-//   let scr = $(this).scrollTop();
-//   if(scr >= $(".con1 .item3").offset().top - $(window).height() && scr < $(".con2").offset().top) {
-    
-//   }
-// });
-
+/*
 const thumbsSlider = new Swiper(".thumb", {
 
 });
@@ -205,5 +199,7 @@ $(".thumb .swiper-slide").on("click", function() {
   const viewImage = $(this).children().attr("src");
   $(".priceWrap .view").html(`<img src="${viewImage}">`)
 })
+*/
+
 
 });//끝

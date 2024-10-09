@@ -12,6 +12,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
+    color: var(--font-color);
 }
 a{
     text-decoration: none;
@@ -243,7 +244,7 @@ header .subnav .innerWrap{
 
 /* banner */
 .banner{
-    padding: 320px 0;
+    padding: 450px 0;
     background-color: #f8f8f8;
     overflow: hidden;
 }
@@ -285,7 +286,8 @@ header .subnav .innerWrap{
 .priceWrap .leftBox{
     width: 100%;
     max-height: 650px;
-    background-color: pink;
+    position: relative;
+    text-align: center;
 }
 .priceWrap .leftBox .viewCon{
     display: none;
@@ -296,6 +298,7 @@ header .subnav .innerWrap{
 .priceWrap .swiper-pagination-bullet-active{
     background-color: var(--main-color);
 }
+
 .priceWrap .rightBox{
     width: 100%;
 }
@@ -329,24 +332,37 @@ header .subnav .innerWrap{
     padding: 30px 0 8px;
 }
 .priceWrap .colorWrap .colorBox li{
-    text-indent: -9999px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid var(--font-color);
     margin-right: 5px;
+    background-color: #fff;
+    border: 1px solid var(--font-color);
+    padding: 5px;
+    overflow: hidden;
 }
-.priceWrap .colorWrap .colorBox li:nth-child(1){
+.priceWrap .colorWrap .colorBox li span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-indent: -9999px;
+    transition: transform 0.3s ease;
+}
+.priceWrap .colorWrap .colorBox li:nth-child(1) span{
     background-color: #DFCAA7;
 }
-.priceWrap .colorWrap .colorBox li:nth-child(2){
+.priceWrap .colorWrap .colorBox li:nth-child(2) span{
     background-color: #DADADA;
 }
-.priceWrap .colorWrap .colorBox li:nth-child(3){
+.priceWrap .colorWrap .colorBox li:nth-child(3) span{
     background-color: #242528;
 }
-.priceWrap .rightBox .colorBox li.active {
-    border: 1px solid blue;
+.priceWrap .colorWrap .colorBox li:hover span{
+    transform: scale(2);
+}
+.priceWrap .rightBox .colorBox li.active span{
+    transform: scale(2);
 }
 .priceWrap .colorWrap .colorTxt{
     width: 100%;
@@ -410,6 +426,7 @@ header .subnav .innerWrap{
 .container{}
 .container>.con{
     padding: 150px 0;
+    overflow: hidden;
 }
 .container .con1{}
 .container .con1 .item{
@@ -424,6 +441,7 @@ header .subnav .innerWrap{
 }
 .con1 .item .imgbox img{
     max-height: 100%;
+    width: 100%;
 }
 .con1 .item .txtBox{
     width: 50%;
@@ -466,24 +484,32 @@ header .subnav .innerWrap{
     bottom: -40px;
     right: 0;
 }
-.con1 .item3{}
 
-/* con1, con5 자세히보기 링크*/
-.con .link{
-    position: fixed;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-    opacity: 1;
-}
-.con1{
+.con1 .item3 .txtBox,
+.con5 .item2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
 }
-.con1 .item3,
+
+/* con1, con5 자세히보기 링크 +con6*/
+/* .con1{
+    position: relative;
+}  지워도 될듯*/
+.con1 .link{
+    justify-content: start;
+    margin-left: 40px;
+}
+.con5 .link{
+    justify-content: flex-end;
+}
+/* 백업 */
+/* .con1 .item3,
 .con5 .item2{
     position: relative;
-}
-/* ddd */
+} */
 .con .link{
     position: absolute;
     width: 100%;
@@ -492,13 +518,13 @@ header .subnav .innerWrap{
     left: 0;
     transform: none;
     display: flex;
-    justify-content: center;
     align-items: flex-end;
+    z-index: 1;
 }
 .con .link .linkbtn{
     position: sticky;
     bottom: 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     left: 0;
     display: flex;
     justify-content: space-between;
@@ -508,11 +534,11 @@ header .subnav .innerWrap{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
     padding: 10px 20px;
-    /* background-color: red; */
 }
 .con .linkbtn .btntxt{
     font-weight: 600;
     font-size: 14px;
+    font-family: "Lexend Deca", sans-serif;
 }
 .con .linkbtn .plus{
     display: inline-block;
@@ -703,8 +729,6 @@ header .subnav .innerWrap{
 .con5 .itemWrap{
     flex-direction: row-reverse;
 }
-.con5 .link{}
-
 /* con6 캔버스*/
 .con6{
     padding: 120px 0;
@@ -758,6 +782,17 @@ header .subnav .innerWrap{
     color: var(--mainbg-color);
 }
 /*↑ .prieceWrap-viewBox, .con6-sdCanvas 공통버튼 ↑*/
+
+.con6 .linkBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 80px 0;
+}
+.con6 .linkBox .link{
+    justify-content: center;
+}
+
 
 /* 제품 세부 정보 */
 .infoWrap{
@@ -1005,6 +1040,17 @@ nav{
 .con1 .item2 .imgbox .detail_3{
     width: 250px;
     bottom: -20px;
+}
+.container .con1 .item3 .txtBox{
+    padding: 40px 0 100px;
+}
+/* con1, con5 자세히보기 링크*/
+.con1 .link{
+    justify-content: center;
+    margin-left: 0;
+}
+.con5 .link{
+    justify-content: center;
 }
 
 /* con3, con5 */
