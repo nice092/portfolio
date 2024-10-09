@@ -127,10 +127,12 @@ var swiper1 = new Swiper(".viewBox", {
     } else if(scr >= $(".con2 .imgbox div").eq(2).offset().top - $(window).height() / 2) {
       $(".txtBox span").removeClass("on");
       $(".txtBox span").eq(2).addClass("on");
+    } else if(scr >= $(".con2 .imgbox div").eq(3).offset().top - $(window).height() / 2) {
+      $(".txtBox span").removeClass("on");
+      $(".txtBox span").eq(3).addClass("on");
     } 
+         
   });
-  
-
 
 // con4 특징 슬라이드     
 var swiper2 = new Swiper(".sdWrap", {
