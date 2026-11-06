@@ -1,1 +1,160 @@
 @charset "utf-8";
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--sub-bk);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 3;
+}
+header.scrolled {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    display: block;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+nav a {
+    font-weight: 800;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    color: var(--sub-bk);
+}
+
+/*===== 메인 =====*/
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+.split {
+    display: flex;
+    align-items: flex-end;     /* EUN 위에 라벨이 있어서 이름 아랫선 기준으로 정렬 */
+    justify-content: center;
+    white-space: nowrap;
+    margin: auto 0;            /* 표지 세로 가운데 */
+}
+.split:not(.is-ready) {
+    visibility: hidden;        /* 크기 계산 전에는 숨김 → 계산 후 한 번에 표시 */
+}
+.split-l,
+.split-r {
+    display: block;
+}
+.split .mono {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: var(--sub-bk);
+    font-family: "Space Mono", monospace;
+    padding-left: 10px;
+}
+.nm {
+    display: inline-block;     /* 글자 폭만큼만 차지 → 크기 계산 정확 */
+    vertical-align: bottom;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 800;
+    font-size: var(--nm-size, 10vw);
+    line-height: .9;
+    letter-spacing: -.04em;
+    overflow: hidden;
+}
+.split-mid {
+    display: flex;
+    align-items: center;
+    height: .9em;              /* 이름 한 줄 높이와 맞춤 → 문장이 이름 가운데에 위치 */
+    width: var(--gap-closed, .28em);
+    font-size: var(--nm-size, 10vw);
+    overflow: hidden;
+}
+.split.is-ready .split-mid {
+    transition: width 1.4s cubic-bezier(.76, 0, .24, 1);   /* 크기 계산이 끝난 뒤에만 애니메이션 */
+}
+.is-open .split-mid {
+    width: var(--mid-w, 360px);
+}
+.mid-txt {
+    display: block;
+    padding: 0 40px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: -.02em;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .8s ease .9s, transform .8s ease .9s;
+}
+.is-open .mid-txt {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .split-mid,
+    .mid-txt {
+        transition: none;
+    }
+}
+
+/*===== 소개 =====*/
+.about-lead {
+    font-size: clamp(34px, 4.4vw, 84px);
+    font-weight: 700;
+    line-height: 1.4;
+}
+.about-lead .txt {
+    color: var(--sub-bk);
+    transition: color .5s;
+}
+.about-lead .txt.on {
+    color: var(--color-basic);
+}
+
+.principles {
+    margin-top: clamp(56px, 5vw, 96px);
+}
+.principle {
+    grid-column: span 4;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-basic);
+}
+.principle .num {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .9s ease, transform .9s cubic-bezier(.2, .7, .1, 1);
+}
+.reveal.is-in {
+    opacity: 1;
+    transform: none;
+}
+.principle h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+}
+.principle p {
+    line-height: 1.7;
+    word-break: keep-all;
+}

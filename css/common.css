@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-:root {
-    --color-basic:#191F28;
-    --color-primary:#E8400C;
-}
-
-/* 기본 폰트 */
 html {
     font-family: "Pretendard Variable", sans-serif;
     /* font-family: "League Spartan", sans-serif;
@@ -14,4 +8,39 @@ html {
 body {
     color: var(--color-basic);
     background-color: #F3F3F3;
+}
+
+:root {
+    --color-basic:#191F28;
+    --color-primary:#E8400C;
+    --sub-bk:#707377;
+    --sub-gy:#4E5968;
+    --font-mono: "Space Mono", monospace;
+}
+
+.color-primary {color: var(--color-primary);}
+.sub-bk{color: var(--sub-bk);}
+.sub-gy{color: var(--sub-gy);}
+
+#main > section {
+    padding: 120px 120px 80px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(16px, 1.459vw, 28px);
+}
+
+.sh-title {
+    margin-bottom: 80px;
+}
+.sh-title .num-title {
+    font-weight: 700;
+}
+.sh-title .sh-title_name {
+    font-size: clamp(52px, 7.2vw, 140px);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
 }
