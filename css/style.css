@@ -249,3 +249,91 @@ nav a {
 }
 
 /*===== 실무작업 =====*/
+.projet_list_wrap .img_box {
+    display: none;
+}
+.projet_list_wrap li {
+    border-bottom: 1px solid var(--color-basic);
+}
+.projet_list_wrap .flex_common {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projet_list_wrap li .projet_text {
+    padding: 1.15vw 0px;
+}
+.projet_list_wrap li .projet_text h5 {
+    /* font-size: clamp(2rem, 3vw, 3rem); */
+    width: 40%;
+}
+.projet_list_wrap li .projet_text p {
+    /* font-size: clamp(1.5rem, 2vw, 2.2rem); */
+}
+.projet_list_wrap li .projet_text p.hash {
+    width: 40%;
+}
+.projet_list_wrap li .projet_text .hash span {
+    border: 1px solid var(--sub-bk);
+    padding: 8px 10px;
+    border-radius: 100px;
+}
+
+/*===== 디자인작업 =====*/
+.design_list_wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+.design_list_wrap .design_list {}
+.design_list .thumb {
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+.design_list .thumb img {}
+.design_list .thumb .link_badge {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    background: var(--color-basic);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 999px;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: all .4s var(--ease);
+}
+.design_list_wrap .design_list:hover .thumb .link_badge {
+    opacity: 1;
+    transform: none;
+}
+.design_list .meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.design_list .meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.design_list .meta span:not(:last-child)::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--color-basic);
+}
+.design_list h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.design_list > p {
+    font-size: 1.3rem;
+}
+.design_list .figma_link {}
+.design_list .figma_link:hover {}

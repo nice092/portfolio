@@ -16,6 +16,7 @@ body {
     --sub-bk:#707377;
     --sub-gy:#4E5968;
     --font-mono: "Space Mono", monospace;
+    --gap: clamp(16px, 1.459vw, 28px);
 }
 
 .color-primary {color: var(--color-primary);}
@@ -30,7 +31,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: clamp(16px, 1.459vw, 28px);
+    gap: var(--gap);
 }
 
 .sh-title {
