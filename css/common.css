@@ -41,7 +41,7 @@ body {
     font-weight: 700;
 }
 .sh-title .sh-title_name {
-    font-size: clamp(52px, 7.2vw, 140px);
+    font-size: clamp(42px, 6.8vw, 100px);
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1;
